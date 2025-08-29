@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import '../widgets/now_playing_control_page.dart';
 import '../widgets/queue_page.dart';
 import '../widgets/my_mixer_page.dart';

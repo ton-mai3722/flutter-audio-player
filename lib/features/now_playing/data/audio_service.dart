@@ -1,4 +1,6 @@
 class AudioService {
+  static Map<String, dynamic>? _currentSong;
+
   static const List<Map<String, dynamic>> sampleSongs = [
     {
       'id': '1',
@@ -48,7 +50,11 @@ class AudioService {
   ];
 
   static Map<String, dynamic> getCurrentSong() {
-    return sampleSongs.first;
+    return _currentSong ?? sampleSongs.first;
+  }
+
+  static void setCurrentSong(Map<String, dynamic> song) {
+    _currentSong = song;
   }
 
   static Map<String, dynamic> getNextSong(String currentId) {
