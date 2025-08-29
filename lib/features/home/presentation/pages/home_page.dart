@@ -161,6 +161,9 @@ class _HomePageState extends State<HomePage> {
             _searchQuery = value;
           });
         },
+        onTapOutside: (event) {
+          FocusScope.of(context).unfocus();
+        },
         decoration: InputDecoration(
           hintText: 'Search songs, artists, albums...',
           hintStyle: TextStyle(color: Colors.grey.shade500),
